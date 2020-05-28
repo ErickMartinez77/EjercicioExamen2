@@ -12,7 +12,7 @@ public class Cajero {
         return saldoCuenta;
     }
 
-    public Cajero(){
+    private Cajero(){
 //        System.out.println("Saldo de cuenta: "+saldoCuenta);
     }
 
