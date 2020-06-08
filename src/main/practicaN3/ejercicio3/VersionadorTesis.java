@@ -1,4 +1,4 @@
-package main.practica3.ejercicio3;
+package main.practicaN3.ejercicio3;
 
 public class VersionadorTesis {
     private String titulo;

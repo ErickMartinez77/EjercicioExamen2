@@ -1,4 +1,4 @@
-package main.practica3.ejercicio4;
+package main.practicaN3.ejercicio4;
 
 public interface IEjercito {
     void setNext(IEjercito handler);

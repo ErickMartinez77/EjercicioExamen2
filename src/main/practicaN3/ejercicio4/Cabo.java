@@ -1,6 +1,6 @@
-package main.practica3.ejercicio4;
+package main.practicaN3.ejercicio4;
 
-public class General implements IEjercito {
+public class Cabo implements IEjercito {
     private IEjercito next;
     @Override
     public void setNext(IEjercito handler) {
@@ -14,10 +14,8 @@ public class General implements IEjercito {
 
     @Override
     public void criteriaHandler(Persona soldado) {
-        if (soldado.getOrden().equals("Entrevistas")){
-            System.out.println("Orden: entrevistas, sera atendido por: General");
-        } else {
-            this.next.criteriaHandler(soldado);
+        if (soldado.getOrden().equals("Limpiezas")){
+            System.out.println("Orden: Limpiezas, sera atendido por: Cabo");
         }
     }
 }

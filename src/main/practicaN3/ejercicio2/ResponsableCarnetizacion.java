@@ -1,6 +1,6 @@
-package main.practica3.ejercicio2;
+package main.practicaN3.ejercicio2;
 
-public class Notario implements ICarnetizacion {
+public class ResponsableCarnetizacion implements ICarnetizacion {
 
     private ICarnetizacion next;
 
@@ -16,8 +16,8 @@ public class Notario implements ICarnetizacion {
 
     @Override
     public void criteriaHandler(Persona cliente) {
-        if(cliente.isFicha() && !cliente.isCertificado() && cliente.isPagoAlBanco()){
-            System.out.println("Usted no aporta el certificado de nacimiento, sera atendido por el notario");
+        if(cliente.isFicha() && cliente.isCertificado() && cliente.isPagoAlBanco()){
+            System.out.println("Usted cuenta con todos los requisitos, sera atendido por Carnetizacion");
         }else{
             this.next.criteriaHandler(cliente);
         }

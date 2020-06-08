@@ -1,6 +1,6 @@
-package main.practica3.ejercicio2;
+package main.practicaN3.ejercicio2;
 
-public class ResponsableCarnetizacion implements ICarnetizacion {
+public class Cajero implements ICarnetizacion {
 
     private ICarnetizacion next;
 
@@ -16,8 +16,8 @@ public class ResponsableCarnetizacion implements ICarnetizacion {
 
     @Override
     public void criteriaHandler(Persona cliente) {
-        if(cliente.isFicha() && cliente.isCertificado() && cliente.isPagoAlBanco()){
-            System.out.println("Usted cuenta con todos los requisitos, sera atendido por Carnetizacion");
+        if(cliente.isFicha() && cliente.isCertificado() && !cliente.isPagoAlBanco()){
+            System.out.println("Usted no cuenta con el pago al banco, sera atendido por el cajero");
         }else{
             this.next.criteriaHandler(cliente);
         }

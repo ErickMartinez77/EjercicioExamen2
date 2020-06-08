@@ -1,6 +1,6 @@
-package main.practica3.ejercicio4;
+package main.practicaN3.ejercicio4;
 
-public class Cabo implements IEjercito {
+public class Teniente implements IEjercito {
     private IEjercito next;
     @Override
     public void setNext(IEjercito handler) {
@@ -14,8 +14,10 @@ public class Cabo implements IEjercito {
 
     @Override
     public void criteriaHandler(Persona soldado) {
-        if (soldado.getOrden().equals("Limpiezas")){
-            System.out.println("Orden: Limpiezas, sera atendido por: Cabo");
+        if (soldado.getOrden().equals("Disciplina")){
+            System.out.println("Orden: Disciplina, sera atendido por: Teniente");
+        } else {
+            this.next.criteriaHandler(soldado);
         }
     }
 }

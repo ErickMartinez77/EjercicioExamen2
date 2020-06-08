@@ -1,4 +1,4 @@
-package main.practica3.ejercicio4;
+package main.practicaN3.ejercicio4;
 
 public class Cliente {
     public static void main (String [] args){

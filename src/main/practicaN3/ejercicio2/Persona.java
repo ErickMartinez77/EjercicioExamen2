@@ -1,4 +1,4 @@
-package main.practica3.ejercicio2;
+package main.practicaN3.ejercicio2;
 
 public class Persona {
 
